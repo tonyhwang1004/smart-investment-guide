@@ -84,6 +84,51 @@
             margin: 0 auto;
         }
         
+        /* 에드센스 광고 영역 스타일 */
+        .ad-container {
+            width: 100%;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-placeholder {
+            color: #6c757d;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        .ad-leaderboard {
+            max-width: 728px;
+            height: 90px;
+            margin: 0 auto;
+        }
+        
+        .ad-banner {
+            max-width: 468px;
+            height: 60px;
+            margin: 0 auto;
+        }
+        
+        .ad-rectangle {
+            max-width: 336px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        
+        .ad-square {
+            max-width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+        
         .content-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -255,6 +300,16 @@
                 gap: 1rem;
                 text-align: center;
             }
+            
+            .ad-leaderboard {
+                max-width: 320px;
+                height: 50px;
+            }
+            
+            .ad-rectangle {
+                max-width: 300px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -271,6 +326,11 @@
         </nav>
     </header>
 
+    <!-- 상단 헤더 광고 (Leaderboard 728x90) -->
+    <div class="ad-container ad-leaderboard">
+        <div class="ad-placeholder">Google AdSense 광고 영역 (728x90)</div>
+    </div>
+
     <section class="hero" id="home">
         <h1>스마트한 투자, 성공적인 미래</h1>
         <p>초보 투자자부터 경험자까지, 모든 분들을 위한 전문적이고 실용적인 투자 정보를 제공합니다.</p>
@@ -286,6 +346,11 @@
                     </div>
                     
                     <p>2025년 금융 시장은 그 어느 때보다 빠르게 변화하고 있습니다. 인공지능, 친환경 에너지, 바이오테크놀로지 등 새로운 기술 분야가 투자의 새로운 기회를 제공하고 있으며, 동시에 전통적인 투자 방식에도 변화가 요구되고 있습니다.</p>
+                    
+                    <!-- 기사 중간 광고 (Banner 468x60) -->
+                    <div class="ad-container ad-banner">
+                        <div class="ad-placeholder">Google AdSense 광고 (468x60)</div>
+                    </div>
                     
                     <div class="highlight-box">
                         <h3>🎯 2025년 주요 투자 트렌드</h3>
@@ -307,6 +372,11 @@
                     
                     <p>투자는 마라톤과 같습니다. 꾸준한 노력과 인내심을 가지고 접근한다면, 시간이 지날수록 복리의 힘을 경험하게 될 것입니다. 무엇보다 자신의 위험 성향을 정확히 파악하고, 그에 맞는 투자 전략을 실행하는 것이 성공의 열쇠입니다.</p>
                 </article>
+                
+                <!-- 기사 사이 광고 (Rectangle 336x280) -->
+                <div class="ad-container ad-rectangle">
+                    <div class="ad-placeholder">Google AdSense 광고 (336x280)</div>
+                </div>
                 
                 <article class="article">
                     <h2>초보 투자자를 위한 주식 투자 기초</h2>
@@ -353,6 +423,11 @@
             </main>
             
             <aside class="sidebar">
+                <!-- 사이드바 상단 광고 (Square 250x250) -->
+                <div class="ad-container ad-square">
+                    <div class="ad-placeholder">Google AdSense 광고 (250x250)</div>
+                </div>
+                
                 <h3>📢 최신 투자 뉴스</h3>
                 <div class="news-item">
                     <strong>AI 관련주 급등</strong>
@@ -365,6 +440,11 @@
                 <div class="news-item">
                     <strong>금리 정책 변화</strong>
                     <small>중앙은행 금리 정책이 투자 시장에 미치는 영향</small>
+                </div>
+                
+                <!-- 사이드바 중간 광고 (Rectangle 336x280) -->
+                <div class="ad-container ad-rectangle">
+                    <div class="ad-placeholder">Google AdSense 광고 (336x280)</div>
                 </div>
                 
                 <h3 style="margin-top: 30px;">🔗 유용한 링크</h3>
@@ -381,6 +461,11 @@
                 </div>
             </aside>
         </div>
+    </div>
+
+    <!-- 하단 광고 (Leaderboard 728x90) -->
+    <div class="ad-container ad-leaderboard">
+        <div class="ad-placeholder">Google AdSense 광고 영역 (728x90)</div>
     </div>
 
     <footer>
