@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연락처 - 스마트 투자 가이드</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .contact-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-link:hover {
+            background: #2980b9;
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .highlight {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📈 스마트 투자 가이드</h1>
+        <p>연락처 및 문의</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="nav-link">← 홈으로 돌아가기</a>
+        
+        <h1>연락처</h1>
+        
+        <div class="highlight">
+            <p>스마트 투자 가이드에 대한 문의사항이나 제안사항이 있으시면 언제든지 연락해 주세요. 고객의 소중한 의견을 듣고 더 나은 서비스를 제공하기 위해 노력하겠습니다.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="icon">📧</span>
+                <h3>이메일 문의</h3>
+                <p><strong>contact@smart-investment-guide.com</strong></p>
+                <p>일반적인 문의사항이나 제안사항을 보내주세요. 24시간 내에 답변드리겠습니다.</p>
+            </div>
+            
+            <div class="contact-card">
+                <span class="icon">⏰</span>
+                <h3>운영시간</h3>
+                <p><strong>평일: 09:00 ~ 18:00</strong></p>
+                <p><strong>주말/공휴일: 휴무</strong></p>
+                <p>운영시간 내에 보내주신 문의는 당일 답변을 원칙으로 합니다.</p>
+            </div>
+            
+            <div class="contact-card">
+                <span class="icon">🏢</span>
+                <h3>회사 정보</h3>
+                <p><strong>스마트 투자 가이드</strong></p>
+                <p>온라인 투자 정보 서비스</p>
+                <p>사업자등록번호: 000-00-00000</p>
+            </div>
+            
+            <div class="contact-card">
+                <span class="icon">📱</span>
+                <h3>소셜 미디어</h3>
+                <p>최신 투자 정보와 업데이트를 확인하세요:</p>
+                <p>• 블로그: smart-investment-guide.com</p>
+                <p>• 뉴스레터 구독 가능</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>📝 문의하기</h2>
+            <p>아래 양식을 작성해 주시면 빠른 시일 내에 답변드리겠습니다.</p>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">이름 *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">이메일 *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">문의 유형</label>
+                    <select id="subject" name="subject">
+                        <option value="general">일반 문의</option>
+                        <option value="investment">투자 정보 관련</option>
+                        <option value="technical">기술적 문제</option>
+                        <option value="partnership">제휴 문의</option>
+                        <option value="other">기타</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">문의 내용 *</label>
+                    <textarea id="message" name="message" placeholder="구체적인 문의 내용을 작성해 주세요." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy" style="display: inline; margin-left: 5px;">
+                        <a href="privacy-policy.html" style="color: #3498db;">개인정보처리방침</a>에 동의합니다. *
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">문의하기</button>
+            </form>
+        </div>
+
+        <h2>📋 자주 묻는 질문</h2>
+        
+        <div style="margin: 20px 0;">
+            <h3>Q: 투자 조언을 개별적으로 받을 수 있나요?</h3>
+            <p>A: 저희는 일반적인 투자 정보를 제공하며, 개별 투자 조언은 제공하지 않습니다. 구체적인 투자 상담은 금융투자전문가와 상담하시기 바랍니다.</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3>Q: 제공되는 정보의 정확성은 어떻게 보장되나요?</h3>
+            <p>A: 저희는 신뢰할 수 있는 출처의 정보를 제공하지만, 모든 투자 결정은 개인의 판단과 책임하에 이루어져야 합니다.</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h3>Q: 사이트 이용에 비용이 발생하나요?</h3>
+            <p>A: 현재 모든 콘텐츠는 무료로 제공됩니다. 향후 프리미엄 서비스가 도입될 경우 사전에 공지하겠습니다.</p>
+        </div>
+
+        <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 30px 0;">
+            <h3>⚠️ 중요 안내</h3>
+            <p>투자에는 항상 위험이 따릅니다. 본 사이트의 정보는 참고용이며, 투자 결정 시에는 반드시 전문가와 상담하시기 바랍니다. 투자로 인한 손실에 대해서는 투자자 본인이 책임져야 합니다.</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="nav-link">홈으로 돌아가기</a>
+        </p>
+    </div>
+</body>
+</html>
