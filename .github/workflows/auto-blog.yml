@@ -1,0 +1,86 @@
+name: 🏦 Smart Investment Guide - Auto Blog Generator
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 한국시간 오전 9시
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-investment-post:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install openai requests pathlib
+        
+    - name: ⚙️ Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Smart Investment Bot"
+    
+    - name: 🤖 Generate Investment Post
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "🚀 투자 가이드 생성 시작!"
+        cd scripts
+        python auto_investment_blog.py
+    
+    - name: 📤 Commit and Push
+      run: |
+        if [[ -n $(git status --porcelain) ]]; then
+          git add .
+          git commit -m "🤖 Auto-post: $(date +'%Y-%m-%d') 투자 가이드"
+          git push origin main
+          echo "✅ 새 포스트 생성 완료!"
+        else
+          echo "📭 변경사항이 없습니다."
+        fi
+
+  deploy:
+    needs: generate-investment-post
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+      
+    - name: 🏗️ Setup Pages
+      uses: actions/configure-pages@v3
+      
+    - name: 💎 Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: 🔨 Build with Jekyll
+      run: bundle exec jekyll build
+        
+    - name: 📤 Upload artifact
+      uses: actions/upload-pages-artifact@v2
+        
+    - name: 🚀 Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
