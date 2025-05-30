@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 투자 가이드 - 초보자를 위한 투자 정보</title>
+    <meta name="description" content="초보 투자자를 위한 주식, 부동산, 펀드 투자 가이드. 전문가 분석과 투자 전략을 제공합니다.">
+    <meta name="keywords" content="투자, 주식, 부동산, 펀드, 투자전략, 재테크, 금융">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        
+        .article {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .article h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .article-meta {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .article p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .investment-tips {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .tips-list {
+            list-style: none;
+            counter-reset: tip-counter;
+        }
+        
+        .tips-list li {
+            counter-increment: tip-counter;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .tips-list li::before {
+            content: counter(tip-counter);
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            background: #3498db;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">📈 스마트 투자 가이드</div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#contact">연락처</a></li>
+                <li><a href="#privacy">개인정보처리방침</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>스마트한 투자, 성공적인 미래</h1>
+        <p>초보 투자자부터 경험자까지, 모든 분들을 위한 전문적이고 실용적인 투자 정보를 제공합니다.</p>
+    </section>
+
+    <div class="container">
+        <div class="content-grid">
+            <main class="main-content">
+                <article class="article">
+                    <h2>2025년 투자 전략: 변화하는 시장에서 성공하는 법</h2>
+                    <div class="article-meta">
+                        <span>📅 2025년 5월 30일</span> | <span>👤 투자 전문가</span> | <span>📖 5분 읽기</span>
+                    </div>
+                    
+                    <p>2025년 금융 시장은 그 어느 때보다 빠르게 변화하고 있습니다. 인공지능, 친환경 에너지, 바이오테크놀로지 등 새로운 기술 분야가 투자의 새로운 기회를 제공하고 있으며, 동시에 전통적인 투자 방식에도 변화가 요구되고 있습니다.</p>
+                    
+                    <div class="highlight-box">
+                        <h3>🎯 2025년 주요 투자 트렌드</h3>
+                        <p>ESG 투자, 디지털 자산, 헬스케어 혁신이 올해 가장 주목받는 투자 영역으로 떠오르고 있습니다. 특히 AI 기술의 발전과 함께 관련 기업들의 성장 가능성이 높게 평가되고 있습니다.</p>
+                    </div>
+                    
+                    <p>성공적인 투자를 위해서는 시장의 변화를 이해하고, 자신만의 투자 철학을 세우는 것이 중요합니다. 단기적인 수익에 현혹되지 말고, 장기적인 관점에서 안정적인 포트폴리오를 구성해야 합니다.</p>
+                    
+                    <div class="investment-tips">
+                        <h3>💡 실전 투자 가이드</h3>
+                        <ol class="tips-list">
+                            <li><strong>목표 설정하기:</strong> 투자 목적과 기간을 명확히 정의하고, 이에 맞는 전략을 수립하세요.</li>
+                            <li><strong>리스크 관리:</strong> 전체 자산의 5-10%만 고위험 투자에 배분하고, 나머지는 안정적인 자산에 투자하세요.</li>
+                            <li><strong>분산 투자:</strong> 다양한 섹터와 지역에 투자를 분산하여 리스크를 최소화하세요.</li>
+                            <li><strong>정기적 모니터링:</strong> 월 1회 이상 포트폴리오를 점검하고 필요시 리밸런싱하세요.</li>
+                            <li><strong>지속적 학습:</strong> 경제 뉴스와 기업 실적을 꾸준히 분석하여 투자 안목을 기르세요.</li>
+                        </ol>
+                    </div>
+                    
+                    <p>투자는 마라톤과 같습니다. 꾸준한 노력과 인내심을 가지고 접근한다면, 시간이 지날수록 복리의 힘을 경험하게 될 것입니다. 무엇보다 자신의 위험 성향을 정확히 파악하고, 그에 맞는 투자 전략을 실행하는 것이 성공의 열쇠입니다.</p>
+                </article>
+                
+                <article class="article">
+                    <h2>초보 투자자를 위한 주식 투자 기초</h2>
+                    <div class="article-meta">
+                        <span>📅 2025년 5월 29일</span> | <span>👤 금융 전문가</span> | <span>📖 7분 읽기</span>
+                    </div>
+                    
+                    <p>주식 투자를 시작하려는 초보자들이 가장 많이 하는 질문은 "어떤 주식을 사야 하나요?"입니다. 하지만 더 중요한 것은 "왜 주식에 투자하는가?"와 "어떻게 투자할 것인가?"입니다.</p>
+                    
+                    <p>주식 투자는 기업의 소유권을 일부 구매하는 것입니다. 따라서 해당 기업의 미래 성장 가능성을 믿고 투자하는 것이 기본 원칙입니다. 단순히 주가가 오를 것 같다는 추측보다는, 기업의 실제 가치와 성장성을 분석하는 것이 중요합니다.</p>
+                </article>
+            </main>
+            
+            <aside class="sidebar">
+                <h3>📢 최신 투자 뉴스</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <strong>AI 관련주 급등</strong><br>
+                        <small>인공지능 기술 발전으로 관련 기업 주가 상승세</small>
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <strong>ESG 투자 확산</strong><br>
+                        <small>환경·사회·지배구조 중심의 투자 트렌드 확산</small>
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                        <strong>금리 정책 변화</strong><br>
+                        <small>중앙은행 금리 정책이 투자 시장에 미치는 영향</small>
+                    </li>
+                </ul>
+                
+                <h3 style="margin-top: 30px;">🔗 유용한 링크</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">투자 용어 사전</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">기업 분석 도구</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">경제 캘린더</a></li>
+                    <li><a href="#" style="color: #3498db; text-decoration: none;">투자 계산기</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">회사소개</a>
+            <a href="#privacy">개인정보처리방침</a>
+            <a href="#terms">이용약관</a>
+            <a href="#contact">연락처</a>
+        </div>
+        <p>&copy; 2025 스마트 투자 가이드. 모든 권리 보유.</p>
+        <p><small>본 사이트의 정보는 투자 참고용이며, 투자 결정은 개인의 책임입니다.</small></p>
+    </footer>
+</body>
+</html>
