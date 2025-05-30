@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏦 스마트 투자 가이드</title>
+    <meta name="description" content="GPT-4가 매일 생성하는 전문 투자 콘텐츠 - 주식, 부동산, 재테크 완벽 가이드">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af, #059669);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item strong {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #1e40af;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #1e40af;
+        }
+        
+        .feature-card h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af, #059669);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #1e40af;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .coming-soon {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        .coming-soon h3 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .coming-soon .date {
+            color: #059669;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .stats { gap: 20px; }
+            .container { padding: 20px 15px; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏦 스마트 투자 가이드</h1>
+        <p>GPT-4가 매일 생성하는 전문 투자 콘텐츠</p>
+        <p>주식 · 부동산 · 재테크 · 대안투자 완벽 가이드</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <strong>50+</strong>
+                <span>전문 주제</span>
+            </div>
+            <div class="stat-item">
+                <strong>매일</strong>
+                <span>새 콘텐츠</span>
+            </div>
+            <div class="stat-item">
+                <strong>GPT-4</strong>
+                <span>AI 생성</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">곧 시작됩니다!</h2>
+        
+        <div class="coming-soon">
+            <h3>🚀 첫 번째 투자 가이드</h3>
+            <div class="date">매일 오전 9시 자동 업데이트</div>
+            <p>GPT-4를 활용한 고품질 투자 콘텐츠가 자동으로 생성됩니다.<br>
+            내일부터 매일 새로운 전문가급 투자 가이드를 만나보세요!</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>주식투자</h3>
+                <p>기초부터 고급 전략까지, 가치투자와 성장투자 완벽 가이드</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>부동산투자</h3>
+                <p>아파트, 오피스텔, 경매까지 부동산 투자의 모든 것</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>재테크</h3>
+                <p>월급쟁이 자산관리부터 은퇴 준비까지 실전 재테크</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>대안투자</h3>
+                <p>암호화폐, 금 투자, 해외투자 등 다양한 투자 기회</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <h2>투자의 새로운 시작</h2>
+        <p>매일 업데이트되는 전문가급 투자 가이드로<br>당신의 투자 실력을 업그레이드하세요!</p>
+        <a href="#" class="btn">투자 여정 시작하기</a>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 스마트 투자 가이드. All rights reserved.</p>
+        <p>⚠️ 모든 투자에는 위험이 따르며, 투자 결정은 본인의 책임입니다.</p>
+    </footer>
+</body>
+</html>
